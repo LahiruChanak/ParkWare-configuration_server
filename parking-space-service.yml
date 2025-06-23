@@ -1,32 +1,26 @@
 server:
   port: 8081
-#  servlet:
-#    context-path: /vehicle-service
 
 spring:
   application:
     name: parking-space-service
   datasource:
     url: jdbc:mysql://localhost:3306/parking_space_db?createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Ijse@123
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-      database-platform: org.hibernate.dialect.MySQL8Dialect
 
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
     fetch-registry: true
+    register-with-eureka: true
   instance:
     prefer-ip-address: true
 
@@ -41,4 +35,7 @@ management:
 
 logging:
   level:
-    root: DEBUG
+    lk.ijse.parkingspaceservice: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

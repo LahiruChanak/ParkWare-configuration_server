@@ -1,9 +1,9 @@
+server:
+  port: 8761
+
 spring:
   application:
     name: eureka-server
-
-server:
-  port: 8761
 
 eureka:
   instance:
@@ -12,7 +12,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: false
@@ -29,4 +29,5 @@ management:
 
 logging:
   level:
-    root: DEBUG
+    com.netflix.eureka: DEBUG
+    com.netflix.discovery: DEBUG

@@ -1,7 +1,5 @@
 server:
   port: 8083
-#  servlet:
-#    context-path: /vehicle-service
 
 spring:
   application:
@@ -19,14 +17,18 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
-      database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  security:
+    user:
+      name: admin
+      password: admin
 
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
     fetch-registry: true
+    register-with-eureka: true
   instance:
     prefer-ip-address: true
 
@@ -41,4 +43,8 @@ management:
 
 logging:
   level:
-    root: DEBUG
+    lk.ijse.userservice: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

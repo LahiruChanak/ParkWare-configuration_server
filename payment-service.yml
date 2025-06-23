@@ -1,7 +1,5 @@
 server:
   port: 8084
-#  servlet:
-#    context-path: /vehicle-service
 
 spring:
   application:
@@ -19,14 +17,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
-      database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
     fetch-registry: true
+    register-with-eureka: true
   instance:
     prefer-ip-address: true
 
@@ -39,6 +37,19 @@ management:
     health:
       show-details: always
 
+# Payment service specific configurations
+payment:
+  mock:
+    success-rate: 95
+    refund-success-rate: 98
+    card-validation-failure-rate: 10
+  transaction:
+    timeout: 30000
+    retry-attempts: 3
+
 logging:
   level:
-    root: DEBUG
+    lk.ijse.paymentservice: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
