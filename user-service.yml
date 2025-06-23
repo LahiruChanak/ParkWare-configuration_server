@@ -1,5 +1,7 @@
 server:
   port: 8083
+  servlet:
+    context-path: /user-service
 
 spring:
   application:
@@ -16,35 +18,16 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-  security:
-    user:
-      name: admin
-      password: admin
 
 eureka:
   client:
-    service-url:
+    serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-    fetch-registry: true
     register-with-eureka: true
-  instance:
-    prefer-ip-address: true
+    fetch-registry: true
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-
-logging:
-  level:
-    lk.ijse.userservice: DEBUG
-    org.springframework.web: DEBUG
-    org.springframework.security: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+        include: health,info
