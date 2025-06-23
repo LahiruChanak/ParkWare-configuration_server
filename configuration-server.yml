@@ -13,14 +13,6 @@ spring:
           uri: https://github.com/LahiruChanak/ParkWare-smart_parking_system.git
           clone-on-start: true
           default-label: master
-          username: LahiruChanak
-          password: ENC(1FSZ5z3TFIydJYkmHNhMwMNVOy07XX2W10rvHMT71SvsNk0t8RK5KUdxbX1x3BILa5oi3Glj8vo=)
-
-jasypt:
-  encryptor:
-    password: qX4z9+YdLtRzMHRUdAp7XyDqZc4B0vAq+iG2C3D6aJ0=
-    algorithm: PBEWithMD5AndDES
-    iv-generator-classname: org.jasypt.iv.NoIvGenerator
 
 eureka:
   client:
@@ -32,8 +24,8 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
