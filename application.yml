@@ -9,7 +9,7 @@ database:
     host: localhost
     port: 3306
     username: root
-    password: password
+    password: Ijse@123
 
 # Common Eureka configuration
 eureka:
@@ -42,9 +42,7 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   level:
-    org.springframework: INFO
-    org.hibernate: INFO
-    com.spms: DEBUG
+    root: DEBUG
 
 # Application info
 info:
