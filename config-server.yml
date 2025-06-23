@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/LahiruChanak/ParkWare-smart_parking_system.git
+          uri: https://github.com/LahiruChanak/ParkWare-configuration_server.git
           clone-on-start: true
           default-label: master
 
