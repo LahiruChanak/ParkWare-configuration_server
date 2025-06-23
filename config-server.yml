@@ -15,8 +15,6 @@ spring:
           default-label: master
           username: LahiruChanak
           password: ENC(1FSZ5z3TFIydJYkmHNhMwMNVOy07XX2W10rvHMT71SvsNk0t8RK5KUdxbX1x3BILa5oi3Glj8vo=)
-  profiles:
-    active: git
 
 jasypt:
   encryptor:
