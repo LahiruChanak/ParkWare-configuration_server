@@ -49,7 +49,7 @@ logging:
 # Application info
 info:
   app:
-    name: Smart Parking Management System
-    description: Microservice-based Smart Parking Management System
+    name: ParkWare - Smart Parking System
+    description: Smart Parking System Application for ParkWare Project. Implementation based on Microservice Architecture
     version: 1.0.0
-    developer: SPMS Team
+    developer: Lahiru Kodikara
